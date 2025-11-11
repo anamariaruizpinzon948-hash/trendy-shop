@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Tu carrito - Princess Beauty</title>
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+  <header>
+    <h1>🛍️ Tu carrito de compras</h1>
+  </header>
+
+  <main>
+    <div id="lista-carrito"></div>
+    <h2 id="total"></h2>
+    <button onclick="vaciarCarrito()">Vaciar carrito</button>
+    <button onclick="window.location.href='index.html'">Volver a la tienda</button>
+  </main>
+
+  <script>
+    let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+
+    function mostrarCarrito() {
+      let lista = document.getElementById("lista-carrito");
+      let total = 0;
+
+      lista.innerHTML = "";
+      carrito.forEach(item => {
+        lista.innerHTML += `<p>${item.nombre} - $${item.precio}</p>`;
+        total += item.precio;
+      });
+
+      document.getElementById("total").textContent = "Total: $" + total;
+    }
+
+    function vaciarCarrito() {
+      localStorage.removeItem("carrito");
+      carrito = [];
+      mostrarCarrito();
+    }
+
+    mostrarCarrito();
+  </script>
+</body>
+</html>

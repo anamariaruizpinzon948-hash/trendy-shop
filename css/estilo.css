@@ -1,0 +1,83 @@
+/* Fondo general y texto */
+body {
+  background-color: #f1bee2;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+/* Encabezado */
+header {
+  background-color: #ff99cc;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Título principal */
+header h1 {
+  color: #d63384;
+  margin: 0;
+  font-size: 2.5em;
+  font-weight: bold;
+}
+
+/* Navegación */
+nav {
+  margin-top: 10px;
+}
+
+nav a {
+  color: #66004d;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0 10px;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: white;
+}
+
+main {
+  padding: 20px;
+}
+
+
+h2 {
+  color: #d63384;
+  margin-top: 30px;
+}
+
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+
+li img {
+  width: 125px;        
+  height: 125px;
+  object-fit: cover;  
+  border-radius: 10px;
+  display: block;
+  margin: 15px auto;
+}
+
+
+button {
+  background-color: #ff66b2;
+  color: white;
+  border: none;
+  padding: 10px 20px;    
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 0.9em;
+  margin-top: 8px;
+  transition: transform 0.2s, background-color 0.3s;
+}
+
+button:hover {
+  background-color: #ff3399;
+  transform: scale(1.05); 
